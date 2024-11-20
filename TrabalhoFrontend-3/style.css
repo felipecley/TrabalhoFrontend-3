@@ -1,0 +1,244 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightblue;
+}
+
+#app{
+    max-width: 1024px;
+    margin: 20px auto;
+    background-color: Snow;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+form{
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.add-usuario{
+    color: black;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: SteelBlue;
+}
+
+.logo-inicio{
+    padding-left: 30px;
+}
+
+.borda-inicio{
+    background-color: SteelBlue;
+    color: black;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que o conteúdo quebre de linha */
+    justify-content: space-between; /* Espaçamento entre o título e os botões */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 90px;
+}
+
+.borda-inicio h1 {
+    margin: 0;
+    flex: 1 1 50%; /* Permite que o título ocupe pelo menos 50% do contêiner */
+    white-space: normal; /* Permite quebra de linha */
+    overflow: visible; /* Não oculta o texto */
+    text-overflow: unset; /* Remove a elipse ("...") */
+}
+h1 {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 24px;
+}
+
+/*estilização imagens pagina inicial*/
+.imagem-loja{
+    display: flex;
+    justify-content: space-around; /* Alinha as imagens com espaço ao redor */
+    gap: 20px; /* Espaçamento entre as imagens */
+    margin-top: 180px;
+}
+.imagem-loja img{
+    border-radius: 20px; /* Aplica bordas arredondadas iguais a todas as imagens */
+    width: 400px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block;
+    animation: moverCimaBaixo 2s infinite;
+}
+@keyframes moverCimaBaixo {
+    0%, 100% {
+        transform: translateY(0); /* Posição inicial */
+    }
+    50% {
+        transform: translateY(-10px); /* Move para cima */
+    }
+}
+
+
+/*estilização botões*/
+.botoes-container{
+    display: flex;
+    gap: 40px; /* Espaçamento entre os botões */
+    flex-shrink: 0; /* Evita que os botões diminuam */
+    border-right: 30px;
+    
+}
+
+.botoes-container a{
+    border: none; /* Adiciona a borda */
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(173, 119, 224);
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    
+}
+
+h2{
+    text-align:  center;
+    margin: 0; /* Remove a margem padrão do h2 */
+    position: absolute; /* Permite o posicionamento em relação ao contêiner */
+    top: 20%; /* Coloca o h2 no meio da tela verticalmente */
+    left: 20%; /* Coloca o h2 no meio da tela horizontalmente */
+    transform: translate(-20%, -20%); /* Ajusta o elemento para que ele fique completamente centrado */
+    width: 100%; /* Isso faz com que a largura do elemento ocupe 100% da tela */
+    font-family: 'Pacifico', sans-serif;
+    font-size: 24px;
+    color: white;
+}
+
+
+
+#add-product-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+#add-user-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+
+
+label{
+    margin-bottom: 10px;
+    color: black;
+    
+}
+
+input{
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid;
+}
+
+
+.botao-usuario{
+    padding: 10px;
+   /* background-image: radial-gradient(circle at 20.04% 47.38%, #b467ff 0, #9856f5 25%, #7745e8 50%, #5035db 75%, #0c28d0 100%);*/
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    background-color: rgb(173, 119, 224);
+}
+
+.botao-usuario:hover{
+    background-color: rgba(33, 201, 7, 0.945);
+}
+
+ul{
+    list-style-type: none;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* estilização borda-final*/
+.borda-final{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: SteelBlue;
+    color: black;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    gap: 40px;
+    box-sizing: border-box;
+}
+.borda-final h3{
+  margin: 0; 
+  text-align: center;
+  padding-left: 5px;
+  font-family: 'Pacifico', sans-serif;
+  font-size: 24px;
+
+}
+
+.titulo-desenvolvido-por{
+    margin: 0;
+    padding-top: 40px;
+}
+
+.card1, .card2, .card3{
+    background-color:rgb(177, 177, 205); /* cor de fundo dos cards */
+    border: 1px solid black; /* borda dos cards */
+    border-radius: 5px; /* cantos arredondados */
+    padding: 10px; /* espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* sombra para destacar */
+    width: 20%; /* largura dos cards */
+    text-align: center; /* centraliza o texto */
+    margin: 10px 0; /* Adiciona margem vertical */
+    width: 100%;
+    max-width: 300px;
+    
+}
+
+.cards-container {
+    display: flex; /* Flexbox para organizar os cards */
+    flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte, se necessário */
+    justify-content: center; /* Centraliza os cards */
+    gap: 20px; /* Espaçamento entre os cards */
+    margin-top: 10px; /* Margem superior nos cards */
+} 
+
+/*estilização do formulario cores*/
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+input.error, textarea.error {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+input.success, textarea.success {
+    border: 2px solid rgb(15, 238, 15);
+    background-color: #e6ffe6;
+}
+
+
+
+
+
+
